@@ -20,7 +20,7 @@ const Product = (props) => {
         <div>
           <button
             onClick={() => handleAddToCart(props.product)}
-            className="btn btn-primary w-full inline rounded-b-lg"
+            className="btn btn-primary w-full inline rounded-b-lg hover:bg-sky-700"
           >
             Add to Cart
             <svg
@@ -29,7 +29,7 @@ const Product = (props) => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-6 h-6 inline-block ml-2"
             >
               <path
                 strokeLinecap="round"
