@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <>
       <nav>
-        <div className="navbar bg-primary ">
+        <div className="navbar bg-primary">
           <div className="flex-1 mx-8 ">
             <img
               className="btn btn-ghost normal-case text-xl"
