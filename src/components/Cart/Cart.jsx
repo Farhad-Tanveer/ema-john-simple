@@ -1,9 +1,9 @@
 import React from "react";
 import "./Cart.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { faTrashAlt, faCreditCard } from "@fortawesome/free-solid-svg-icons";
 
-const Cart = ({ cart, handleClearCart }) => {
+const Cart = ({ cart, handleClearCart, children }) => {
   //   const cart = props.cart; or
   //   const { cart } = props;  option 2
 
@@ -37,8 +37,10 @@ const Cart = ({ cart, handleClearCart }) => {
           onClick={handleClearCart}
           className="btn btn-error mr-5  w-96 flex items-centermr-5 group justify-between"
         >
-          <span>Clear Cart </span>
+          <span>Clear Cart</span>
           <FontAwesomeIcon icon={faTrashAlt} />
+        </button>
+        {children}
       </div>
     </div>
   );

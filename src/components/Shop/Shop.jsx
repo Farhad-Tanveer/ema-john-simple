@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons";
 import {
   addToDb,
   deleteShoppingCart,
@@ -63,7 +66,14 @@ const Shop = () => {
         ))}
       </div>
       <div className="cart-container bg-secondary">
-        <Cart cart={cart} handleClearCart={handleClearCart}></Cart>
+        <Cart cart={cart} handleClearCart={handleClearCart}>
+          <Link to="/orders">
+            <button className="btn btn-warning mt-5 mr-5  w-96 flex items-centermr-5 group justify-between">
+              <span>Review Order</span>
+              <FontAwesomeIcon icon={faArrowCircleRight} />
+            </button>
+          </Link>
+        </Cart>
       </div>
     </div>
   );
