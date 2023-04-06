@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../../images/Logo.svg";
 
 const Header = () => {
@@ -16,16 +17,16 @@ const Header = () => {
           <div className="flex-none mx-8 text-white">
             <ul className="menu menu-horizontal px-1">
               <li>
-                <a>Order</a>
+                <Link to="/">Shop</Link>
               </li>
               <li>
-                <a>Order Review</a>
+                <Link to="/orders">Orders</Link>
               </li>
               <li>
-                <a>Manage Inventory</a>
+                <Link to="/inventory">Inventory</Link>
               </li>
               <li>
-                <a>Login</a>
+                <Link to="/login">Login</Link>
               </li>
             </ul>
           </div>
