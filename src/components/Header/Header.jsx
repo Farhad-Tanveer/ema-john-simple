@@ -8,11 +8,13 @@ const Header = () => {
       <nav>
         <div className="navbar bg-primary">
           <div className="flex-1 mx-8 ">
-            <img
-              className="btn btn-ghost normal-case text-xl"
-              src={logo}
-              alt=""
-            />
+            <Link to="/">
+              <img
+                className="btn btn-ghost normal-case text-xl"
+                src={logo}
+                alt=""
+              />
+            </Link>
           </div>
           <div className="flex-none mx-8 text-white">
             <ul className="menu menu-horizontal px-1">
@@ -27,6 +29,9 @@ const Header = () => {
               </li>
               <li>
                 <Link to="/login">Login</Link>
+              </li>
+              <li>
+                <Link to="/signup">Signup</Link>
               </li>
             </ul>
           </div>

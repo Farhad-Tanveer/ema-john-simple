@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Login = () => {
+const Signup = () => {
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -34,18 +34,30 @@ const Login = () => {
                 required
               />
             </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Confirm Password</span>
+              </label>
+              <input
+                type="password"
+                name="confirm"
+                placeholder="password"
+                className="input input-bordered"
+                required
+              />
+            </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
+              <button className="btn btn-primary">Signup</button>
             </div>
             <label className="label">
               <div>
-                <span>New to Ema-John?</span>
+                <span>Already have an account?</span>
                 <Link
-                  to="/signup"
+                  to="/login"
                   href="#"
                   className="label-text-alt link link-hover ml-2 text-base text-warning btn-link"
                 >
-                  Create New Account
+                  Login
                 </Link>
               </div>
             </label>
@@ -64,4 +76,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;
