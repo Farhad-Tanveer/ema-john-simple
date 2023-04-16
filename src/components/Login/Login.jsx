@@ -49,10 +49,10 @@ const Login = () => {
                 </Link>
               </div>
             </label>
-            <div class="relative flex py-5 items-center">
-              <div class="flex-grow border-t border-gray-400"></div>
-              <span class="flex-shrink mx-4 text-gray-400">Or</span>
-              <div class="flex-grow border-t border-gray-400"></div>
+            <div className="relative flex py-1 items-center">
+              <div className="flex-grow border-t border-gray-400"></div>
+              <span className="flex-shrink mx-4 text-gray-400">Or</span>
+              <div className="flex-grow border-t border-gray-400"></div>
             </div>
             <div className="form-control mt-6">
               <button className="btn btn-outline">Continue with Google</button>
