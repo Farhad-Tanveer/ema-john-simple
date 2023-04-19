@@ -1,8 +1,20 @@
 import React from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/Logo.svg";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then((result) => {})
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
   return (
     <>
       <nav>
@@ -32,6 +44,19 @@ const Header = () => {
               </li>
               <li>
                 <Link to="/signup">Signup</Link>
+              </li>
+              <li>
+                {user && (
+                  <span>
+                    <span>{user.email}</span> ||{" "}
+                    <button
+                      onClick={handleLogOut}
+                      className="border border-purple-600 rounded-full p-2"
+                    >
+                      Sign Out
+                    </button>
+                  </span>
+                )}
               </li>
             </ul>
           </div>
